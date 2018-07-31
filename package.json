@@ -1,0 +1,22 @@
+{
+  "name": "deeplinksrepo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bittu/deeplinks.git"
+  },
+  "author": "Sandeep Vemula",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bittu/deeplinks/issues"
+  },
+  "homepage": "https://github.com/bittu/deeplinks#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
