@@ -62,5 +62,5 @@ app.get('/openapp.html', (req, res) => {
 			</html>`)
 })
 
-// var server = https.createServer(certOptions, app).listen(3000)
-var server = http.createServer(app).listen(80);
+// var server = https.createServer(certOptions, app).listen(process.env.PORT || 3000)
+var server = http.createServer(app).listen(process.env.PORT || 3000);
