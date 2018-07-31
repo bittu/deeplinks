@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
 	res.send(`<!doctype html>
 			<html>
 				<head>
-					<link rel="alternate" href="android-app://com.test.bt/https/10.0.2.2/openapp.html" />
+					<link rel="alternate" href="android-app://com.test.bt/https/obscure-badlands-27486/openapp.html" />
 				</head>
 				<body>
 					<a href="/openapp.html">Click here</a>
@@ -54,7 +54,7 @@ app.get('/openapp.html', (req, res) => {
 	res.send(`<!doctype html>
 			<html>
 				<head>
-					<link rel="alternate" href="android-app://com.test.bt/https/10.0.2.2/openapp.html" />
+					<link rel="alternate" href="android-app://com.test.bt/https/obscure-badlands-27486/openapp.html" />
 				</head>
 				<body>
 					<h1>This page will redirect user to playstore</h1>
