@@ -44,6 +44,10 @@ app.get('/.well-known/assetlinks.json', (req, res) => {
 })*/
 
 /* ios */
+app.get('/apple-app-site-association', (req, res) => {
+	res.setHeader('Content-Type', 'application/json');
+	res.send('{"applinks": {"apps": [],"details": [{"appID": "<YOUR_TEAM_ID_FROM_MEMBER_CENTER>.com.test.bt","paths": ["/openapp.html"]}]}}');
+})
 app.get('/.well-known/apple-app-site-association', (req, res) => {
 	res.setHeader('Content-Type', 'application/json');
 	res.send('{"applinks": {"apps": [],"details": [{"appID": "<YOUR_TEAM_ID_FROM_MEMBER_CENTER>.com.test.bt","paths": ["/openapp.html"]}]}}');
