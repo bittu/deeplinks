@@ -24,13 +24,13 @@ app.get('/', (req, res) => {
 			</html>`)
 });
 
-/* signed */
+/* signed android */
 app.get('/.well-known/assetlinks.json', (req, res) => {
 	res.setHeader('Content-Type', 'application/json');
 	res.send('[{"relation": ["delegate_permission/common.handle_all_urls"],"target": {"namespace": "android_app","package_name": "com.test.bt","sha256_cert_fingerprints":["FE:F4:6E:66:4C:61:FC:1D:4E:F7:F6:A7:65:38:EA:85:D0:81:F0:C0:6D:23:83:CC:2A:F6:4C:EE:BF:9C:3C:CE"]}}]');
 })
 
-/* debug */
+/* debug android */
 /*app.get('/.well-known/assetlinks.json', (req, res) => {
 	res.json(`[{
 				  "relation": ["delegate_permission/common.handle_all_urls"],
@@ -42,6 +42,12 @@ app.get('/.well-known/assetlinks.json', (req, res) => {
 				  }
 				}]`)
 })*/
+
+/* ios */
+app.get('/.well-known/apple-app-site-association', (req, res) => {
+	res.setHeader('Content-Type', 'application/json');
+	res.send('{"applinks": {"apps": [],"details": [{"appID": "<YOUR_TEAM_ID_FROM_MEMBER_CENTER>.com.test.bt","paths": ["/openapp.html"]}]}}');
+})
 
 app.get('/openapp.html', (req, res) => {
 	res.send(`<!doctype html>
