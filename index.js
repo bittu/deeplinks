@@ -18,8 +18,11 @@ app.get('/', (req, res) => {
 					<link rel="alternate" href="android-app://com.test.bt/https/obscure-badlands-27486/openapp.html" />
 				</head>
 				<body>
-					<a href="/openapp.html">Click here</a>
-					<a href="/openapp.html?hello">Click here for hello</a>
+					<a href="/openapp.html">Open app without params</a>
+					<br />
+					<a href="/openapp.html?param=true">Open app with params</a>
+					</br />
+					<a href="/someotherpage">Other page</a>
 				</body>
 			</html>`)
 });
@@ -46,11 +49,11 @@ app.get('/.well-known/assetlinks.json', (req, res) => {
 /* ios */
 app.get('/apple-app-site-association', (req, res) => {
 	res.setHeader('Content-Type', 'application/json');
-	res.send('{"applinks": {"apps": [],"details": [{"appID": "RQC7JGZ7X5.com.bt.tve.beta","paths": ["/openapp.html"]}]}}');
+	res.send('{"applinks": {"apps": [],"details": [{"appID": "RQC7JGZ7X5.com.bt.tve.beta","paths": ["*"]}]}}');
 })
 app.get('/.well-known/apple-app-site-association', (req, res) => {
 	res.setHeader('Content-Type', 'application/json');
-	res.send('{"applinks": {"apps": [],"details": [{"appID": "RQC7JGZ7X5.com.bt.tve.beta","paths": ["/openapp.html"]}]}}');
+	res.send('{"applinks": {"apps": [],"details": [{"appID": "RQC7JGZ7X5.com.bt.tve.beta","paths": ["*"]}]}}');
 })
 
 app.get('/openapp.html', (req, res) => {
@@ -61,6 +64,15 @@ app.get('/openapp.html', (req, res) => {
 				</head>
 				<body>
 					<h1>This page will redirect user to playstore</h1>
+				</body>
+			</html>`)
+})
+
+app.get('/someotherpage', (req, res) => {
+	res.send(`<!doctype html>
+			<html>
+				<body>
+					<h1>Some other page</h1>
 				</body>
 			</html>`)
 })
