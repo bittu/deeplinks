@@ -20,8 +20,13 @@ app.get('/', (req, res) => {
 				<body>
 					<a href="/openapp.html">Open app without params</a>
 					<br />
+					<br />
 					<a href="/openapp.html?param=true">Open app with params</a>
+					<br />
+					<br />
+					<a href="/openapp.html" target="_blank">Open app without params on new tab</a>
 					</br />
+					<br />
 					<a href="/someotherpage">Other page</a>
 				</body>
 			</html>`)
