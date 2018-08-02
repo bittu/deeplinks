@@ -49,11 +49,11 @@ app.get('/.well-known/assetlinks.json', (req, res) => {
 /* ios */
 app.get('/apple-app-site-association', (req, res) => {
 	res.setHeader('Content-Type', 'application/json');
-	res.send('{"applinks": {"apps": [],"details": [{"appID": "RQC7JGZ7X5.com.bt.tve.beta","paths": ["*"]}]}}');
+	res.send('{"applinks": {"apps": [],"details": [{"appID": "RQC7JGZ7X5.com.bt.tve.beta","paths": ["/openapp.html"]}]}}');
 })
 app.get('/.well-known/apple-app-site-association', (req, res) => {
 	res.setHeader('Content-Type', 'application/json');
-	res.send('{"applinks": {"apps": [],"details": [{"appID": "RQC7JGZ7X5.com.bt.tve.beta","paths": ["*"]}]}}');
+	res.send('{"applinks": {"apps": [],"details": [{"appID": "RQC7JGZ7X5.com.bt.tve.beta","paths": ["/openapp.html"]}]}}');
 })
 
 app.get('/openapp.html', (req, res) => {
